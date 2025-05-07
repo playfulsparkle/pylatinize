@@ -105,12 +105,16 @@ To ensure the quality of your contributions:
 - Test changes in a virtual environment.
 - Validate edge cases, such as different input formats or special characters.
 - Confirm that your changes do not conflict with existing functionality.
+- Use the `Makefile` commands for testing and linting:
+  - `make test` to run tests
+  - `make lint` to check for linting issues
+  - `make coverage` to generate a test coverage report
 
 ---
 
 ## License Agreement
 
-By contributing to this project, you agree that your work will be licensed under the project's [MIT License](LICENSE).
+By contributing to this project, you agree that your work will be licensed under the project's [BSD-3-Clause License](LICENSE).
 
 ---
 
