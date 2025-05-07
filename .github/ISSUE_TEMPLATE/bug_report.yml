@@ -1,0 +1,103 @@
+name: 🐞 Bug Report
+description: Create a report to help us improve the pylatinize Python library.
+title: "Bug Report Title"
+labels: []
+assignees:
+  - zsoltoroszlany82
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please fill out the details below to help us understand and fix the issue.
+
+  - type: textarea
+    attributes:
+      label: Describe the Bug
+      description: A clear and concise description of what the bug is.
+      placeholder: e.g. The 'decompose' method returns incorrect output for specific characters.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Steps to Reproduce
+      description: List the steps to reproduce the behavior. **Include the input Unicode text, the mapping(s) used, the normalization form (if specified), and the code snippet.**
+      placeholder: |
+        1. Use the following input string: "Your Unicode text here"
+        2. Initialize PyLatinize with these mappings: `(default_mapping, custom_mapping={...})`
+        3. Call the decompose method with normalization: `latinizer.decompose(input_text, normalization=Normalization.NFD)`
+        4. Run the following Python code:
+           ```python
+           from pylatinize import PyLatinize, Normalization, default_mapping # Import others as needed
+
+           # Define your mappings
+           my_mappings = (default_mapping,) # Add other mappings or custom_mapping here
+
+           # Create latinizer instance
+           latinizer = PyLatinize(my_mappings)
+
+           input_text = "Paste the exact input string here"
+
+           # Call decompose (adjust parameters as used)
+           output_text = latinizer.decompose(input_text, normalization=Normalization.DECOMPOSE)
+
+           print(f"Input: {input_text}")
+           print(f"Output: {output_text}")
+           ```
+        5. Describe the resulting incorrect output.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Expected Behavior
+      description: A clear and concise description of what you expected the output to be for the given input and parameters.
+      placeholder: For the input "Your Unicode text", I expected the output "Your ASCII text".
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Error Logs or Messages
+      description: Paste any relevant traceback, error messages, or logs here.
+      placeholder: |
+        Traceback (most recent call last):
+          File "your_script.py", line X, in <module>
+            ...
+        SomeError: Error message details
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: Screenshots or Video
+      description: If applicable, add screenshots or a video to help explain your problem (e.g., showing the output, file content if reading from one).
+    validations:
+      required: false
+
+  - type: input
+    attributes:
+      label: Pylatinize Version
+      description: What version of pylatinize are you using?
+      placeholder: e.g. 1.0.0
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: Python Version
+      description: What version of Python are you using?
+      placeholder: e.g. 3.9, 3.10, 3.11
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Environment Details
+      description: Operating System, and any other relevant environment details (e.g., how it was installed, virtual environment details, related libraries).
+      placeholder: |
+        - OS: Ubuntu 22.04
+        - Installation method: pip
+        - Environment: virtualenv
+    validations:
+      required: true
